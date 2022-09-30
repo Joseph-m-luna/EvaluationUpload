@@ -13,11 +13,11 @@ When you are finished, push the code to your own repo and send the link to maxwi
 ---
 ## Info
 
-Name: 
+Name: Joseph Luna
 
-Email:
+Email: joseph.luna535@gmail.com
 
-Project you are applying for:
+Project you are applying for: MoonFALL 
 
 
 ---
