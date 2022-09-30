@@ -10,15 +10,49 @@ class MatrixOps:
         self._kernel = np.random.randint(-2,2, size=(3,3))
     
     def largest_index(self, matrix):
-        ''' Make this function return a tuple of the (row, col) 
-            index of the largest value in the matrix '''
+        #sets maxVal bellow minimum value
+        maxVal = -10
+        maxTup = (0, 0)
 
-        return (0,0)
+        #iterates row by row, column by column throuogh matrix
+        for row in range(0, len(matrix)):
+            for col in range(0, len(matrix[0])):
+                if matrix[row, col] > maxVal:
+                    #if new value is found, update maxTup and maxVal
+                    maxTup = (row, col)
+                    maxVal = matrix[row, col]
+
+        return maxTup
 
     def convolve(self, kernel, matrix):
-        ''' Make this function return the result of a 2D convolution '''
+        #kernel Inversion
+        invKernel = np.zeros((len(kernel), len(kernel[0])))
+        for col in range(0, len(kernel)):
+            for row in range(0, len(kernel[0])):
+                invKernel[col, row] = kernel[row, col]
 
-        return matrix
+        # padding matrix (generalized for kernal of any size)
+        width = (len(matrix) + (2 * (len((kernel)) - 1)))
+        length = (len(matrix[0]) + (2 * (len((kernel[0])) - 1)))
+        tuple = (width, length)
+
+        #initialize 2d arrays for padded copy and
+        newMat = np.zeros((width-(len(kernel)+1), length-(len(kernel[0])+1)))
+        copyMat = np.zeros((width, length))
+        for row in range(0, len(matrix)):
+            for col in range(0, len(matrix[0])):
+                copyMat[((len(kernel) - 1) + row), ((len(kernel[0]) - 1) + col)] = matrix[row, col]
+
+        #matrix convolution
+        for row in range(0, width - len(kernel) - 1):
+            for col in range(0, length - len(kernel[0]) - 1):
+                total = 0
+                for kRow in range(0, len(kernel)):
+                    for kCol in range(0, len(kernel[0])):
+                        total = total + invKernel[kRow, kCol] * copyMat[(row + kRow), (col + kCol)]
+                newMat[row, col] = total
+
+        return newMat
 
     def run(self):
         print("Largest index is at ", self.largest_index(self._matrix))

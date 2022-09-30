@@ -42,74 +42,74 @@ What is one difference between a float and an int?
 **General**
 
 What does an activity diagram show?
-
+>An activity diagram is a complex state/decision diagram which allows developers to visualize the flow between different processes within a program or use case
 
 Which of these languages offers the lowest level of control and fastest execution?
  - Python
  - C#
  - Java
- - C
+> - C
 
 
 What is the purpose of version control systems (VCS) such as Git or Mercurial?
-
+>Version Control Systems have multiple advantages to programming on a single system. These include improved communication for collaborative projects, improved systems for code documentation through forks, documented push/pull requests, and other tools, and better version iteration throughout a development lifecycle.
 ---
 **Embedded Systems**
 
 Which level of cache would be accessible by only a single core on a multi-core chip?
- - L1
+> - L1
  - L2
  - L3
  - All levels
 
 
 Explain one difference between any of these 2 protocols: I2C, SPI, UART:
-
+>intentially blank
 
 What is a feature Java has that C++ does not?
  - Object oriented classes
  - Lambda expressions
  - Data streams
- - Implicit garbage collection
+> - Implicit garbage collection
 
 
 Name one major concern when developing for embedded systems and edge computing such as a deployed Jetson or Raspberry Pi:
-
+> deployed systems may be difficult to access and update after deployment (both physically and with regards to networking)
 
 Which of the following is a job for the DHCP server?
  - Route packets out to the internet
  - Make particular ports available for access on the inter/intranet
- - Assign IP addresses on the network
+> - Assign IP addresses on the network
  - Look up what domain name maps to an address on the internet
 
 ---
 **Linux**
 
 What does the permission code 777 represent (as used in `chmod 777`)?
-
+>this command provides full read/write/execute privilages to *all* users groups and "others" on a system
 
 Which of these commands sets and environment variable in Linux? 
- - export VAR=val
+> - export VAR=val
  - export $VAR=val 
  - echo VAR=val
  - echo $VAR=val
 
 
 What is one major role of systemd?
-
+>Systemd is a vital component to management of system processes
 
 ---
 **AI**
 
 Which of these network architectures would be best suited for processing text?
  - Convolution Neural Network
- - Recurrent Neural Network
+> - Recurrent Neural Network
  - Multilayer Perceptron
  - U-Net
 
 
 What is one solution to the vanishing gradient problem in backprop?
-
+>intentionally left blank
 
 What is the traditional flow of interactions for a reinforcement learning agent?
  - Read the current state, take an action, environment updates state
@@ -118,10 +118,10 @@ What is the traditional flow of interactions for a reinforcement learning agent?
 
 
 Briefly describe either branch and bound or dynamic programming:
-
+>Dynamic programming refers to an algorithmic approach to problem solving in which the problem is broken up into smaller sub-problems to solve
 
 What is the main challenge with implementing A*:
  - Picking the correct heuristic
  - Initialization parameters
  - Solution will not converge
- - Too long of an execution compared to other common pathfinders
+> - Too long of an execution compared to other common pathfinders
